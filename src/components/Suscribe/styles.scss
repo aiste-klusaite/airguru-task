@@ -1,0 +1,149 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/media';
+
+.suscribe {
+    position: relative;
+    background-image: url('../../assets/images/png/image.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    @include phone {
+        background-size: 200% 150%;
+    }
+
+    .wave-cover {
+        position: absolute;
+        bottom: 0;
+        left: -45px;
+
+        @include phone {
+            width: 900px;
+            bottom: -52px;
+        }
+    }
+    
+    &__container {
+        width: 90%;
+        padding-top: 230px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+
+        @include tablet {
+            width: 100%;
+            padding-top: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include phone {
+            padding-top: 100px;
+        }
+
+        .error {
+            position: absolute;
+            top: 95px;
+            width: 100%;
+            background-color: rgb(248, 103, 103);
+
+            h4 {
+                padding: 0.8em 0;
+                color: $white-text;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+
+        .message {
+            position: absolute;
+            top: 95px;
+            width: 100%;
+            background-color: $green-background;
+
+            h4 {
+                padding: 0.8em 0;
+                color: $white-text;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+
+        &__heading {
+            width: 70%;
+            color: $white-text;
+            font-size: 1.9em;
+
+            @include tablet {
+                width: 90%;
+                margin: 2em 0;
+                text-align: center;
+                font-size: 1.6em;
+            }
+
+            @include phone {
+                width: 90%;
+                margin: 2em 0;
+                text-align: center;
+                font-size: 1.25em; 
+            }
+
+            @include small-phone {
+                width: 90%;
+                margin: 2em 0;
+                text-align: center;
+                font-size: 1em; 
+            }
+        }
+
+        &__mail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__input { 
+                position: relative;
+
+                input[type=email] {
+                    width: 300px;
+                    padding: 1.25em 1.125em 1.125em 5em;
+                    border-radius: 5px;
+                    border: 1px solid $blue-border;
+                    font-size: 0.9em;
+                    color: $blue-text;
+    
+                    &::placeholder {
+                        color: $blue-text;
+                        font-size: 1.35em;
+                    }
+    
+                    &:focus {
+                        outline: none;
+                        border: 2px solid $blue-background;
+                    }
+                } 
+
+                .mail-icon {
+                    position: absolute;
+                    left: 20px;
+                    top: 6px;
+                }
+            }
+            
+            button {
+                margin-top: 1.56em;
+                padding: 0.9em 1.56em;
+                outline: none;
+                border-radius: 30px;
+                border: none;
+                background-image: linear-gradient(to right, $light-blue-background, $blue-background);
+                box-shadow: 1px 1px 5px 1px #00000016;
+                color: $white-text;
+                text-transform: uppercase;
+                font-size: 1em;
+                cursor: pointer;
+            }
+        }
+    }
+}

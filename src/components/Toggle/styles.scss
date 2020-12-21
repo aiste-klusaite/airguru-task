@@ -1,0 +1,42 @@
+@import '../../assets/styles/media';
+
+.toggle {
+    display: none;
+
+    @include tablet {
+        display: block;
+        width: 31px;
+        height: 30px;
+        margin-left: 1.56em;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 10;
+
+        .line1,
+        .line2,
+        .line3 {
+            transition: ease-in 0.2s;
+            border: 1px solid black;
+            margin: 0.5em 0;
+        }
+    }
+}
+
+.cross {
+    
+    .line1 {
+        transition: ease-in 0.2s;
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+
+    .line2 {
+        opacity: 0;
+    }
+
+    .line3 {
+        transition: ease-in 0.2s;
+        transform: rotate(45deg) translate(-4.5px, -3.5px);
+    }
+}

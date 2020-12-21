@@ -1,0 +1,45 @@
+@import './variables';
+@import './media';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: $grey-background;
+  }
+  
+  .content {
+    min-height: 100vh;
+
+    @include tablet {
+      min-height: 70vh;
+    }
+
+    @include phone {
+      min-height: 90vh;
+    }
+
+  }
+
+  .content-wrapper {
+    margin: auto;
+    max-width: 1500px;
+
+    @include desktop {
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    @include big-tablet {
+      max-width: 900px;
+      margin: auto;
+    }
+  }
+
+  

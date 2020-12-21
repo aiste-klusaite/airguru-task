@@ -1,0 +1,34 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/media';
+
+.button-minus {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
+    border: 3px solid $dark-blue-boarder;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include phone {
+        width: 35px;
+        height: 35px;
+    }
+    
+    span {
+        text-align: center;
+        color: $blue-text;
+        font-size: 4em;
+        position: absolute;
+        bottom: -35%;
+
+        @include phone {
+            font-size: 3em;
+            bottom: -28%;
+        } 
+    }
+}

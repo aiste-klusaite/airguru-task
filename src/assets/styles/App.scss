@@ -1,0 +1,27 @@
+@import './variables';
+@import './resets';
+@import './media';
+
+.app {
+    overflow: hidden;
+
+    &__container {
+        position: relative;
+        height: 180px;
+
+        @include phone {
+            height: 130px;
+        }
+
+        &__icon {
+            position: absolute;
+            bottom: 0px;
+            left: -45px;
+            transform: rotateX(180deg); 
+
+            @include phone {
+                width: 900px;
+            }
+        }
+    }
+}

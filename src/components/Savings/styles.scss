@@ -1,0 +1,105 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/media';
+
+.savings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-background;
+    padding: 1em 0;
+
+    h1 {
+        padding-bottom: 1em;
+        text-align: center;
+        color: $blue-text;
+        font-size: 3em;
+
+        @include phone {
+            font-size: 1.7em;
+        }
+    }
+
+    &__container {
+        width: 70%;
+        padding: 1.56em 0.8em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $light-blue-background-o;
+        border-radius: 10px;
+        border: 1px solid $blue-border;
+
+        @include tablet {
+            width: 95%;
+        }
+
+        &__radio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            p {
+                color: $orange-text;
+                font-size: 1.25em;
+            }
+
+            &__content {
+                display: flex;
+                justify-content: center;
+
+                .radio {
+                    padding: 1.25em;
+                    
+                    label {
+                        padding-left: 0.6em;
+                    }
+                }
+
+                @include phone {
+                    padding: 1em 0;
+
+                    .radio {
+                        padding: 0.5em;
+                    }
+
+                    label {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+
+        &__sum {
+            text-align: center;
+
+            h2 {
+                color: $blue-text;
+                font-size: 2em;
+            }
+            h1 {
+                color: $blue-text;
+                font-size: 3em;
+            }
+        }
+
+        &__button {
+            position: relative;
+            margin-top: 1em;
+            padding: 0.5em 2em 0.5em 3em;
+            border-radius: 30px;
+            border: 1px solid $orange-background;
+            background-color: $orange-background;
+            color: $white-text;
+            font-size: 1.125em;
+            outline: none;
+            box-shadow: 1px 1px 5px 1px #00000016;
+
+            .check-icon {
+                position: absolute;
+                left: 35px;
+                top: 3px;
+            }
+        }
+    }
+}
