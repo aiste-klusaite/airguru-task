@@ -65,7 +65,8 @@ const Suscribe = () => {
         <div className="suscribe__container__mail">
           <div className="suscribe__container__mail__input">
             <input 
-              type="email" 
+              type="email"
+              value={email}
               placeholder="Enter Your E-Mail" 
               onChange={(e) => onChangeEmail(e)}
             />
